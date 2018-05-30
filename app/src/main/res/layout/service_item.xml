@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="servicemonitor.servicestatusmonitor.home.data.models.ServiceToCheck" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="name"/>
+
+            <TextView
+                android:id="@+id/label_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/url_label"
+                android:textAppearance="@style/TextAppearance.Caption"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                />
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Caption"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintLeft_toRightOf="@+id/label_url"
+                tools:text="name"/>
+
+            <TextView
+                android:id="@+id/label_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_label"
+                android:textAppearance="@style/TextAppearance.Body"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_url"
+                />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Body"
+                app:layout_constraintLeft_toRightOf="@+id/label_status"
+                app:layout_constraintTop_toBottomOf="@+id/label"
+                tools:text="OK" />
+
+            <TextView
+                android:id="@+id/label_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_checked"
+                android:textAppearance="@style/TextAppearance.Body"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_status"
+                />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Body"
+                app:layout_constraintLeft_toRightOf="@+id/label_time"
+                app:layout_constraintTop_toBottomOf="@+id/label_status"
+                tools:text="10:10:10"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</layout>
